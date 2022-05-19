@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundaments flex-flow</title>
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            max-width: 500px;
+        }
+        .default{
+            flex-flow: row nowrap;
+        }
+        .wrap{
+            flex-flow: row wrap;
+        }
+        .wrap-reverse{
+            flex-flow: row wrap-reverse;
+        }
+        .r-nowrap{
+            flex-flow: row-reverse nowrap;
+        }
+        .r-wrap{
+            flex-flow: row-reverse wrap;
+        }
+        .rr-wrap{
+            flex-flow: row-reverse wrap-reverse;
+        }
+        .item{
+            background-color: blueviolet;
+            margin: 5px;
+            color: aliceblue;
+            text-align: center;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+        }
+        /*coluna*/
+        .flex-container-column{
+            display: flex;
+            border: 1px solid black;
+            max-width: 700px;
+            height: 200px;
+        }
+        .column{
+            flex-flow: column nowrap;
+        }
+        .wrapColumn{
+            flex-flow: column wrap;
+        }
+        .wrap-reverseColumn{
+            flex-flow: column wrap-reverse;
+        }
+        .r-nowrapColumn{
+            flex-flow: column-reverse nowrap;
+        }
+        .r-wrapColumn{
+            flex-flow: column-reverse wrap;
+        }
+        .rr-wrapColumn{
+            flex-flow: column-reverse wrap-reverse;
+        }
+        .itemColumn{
+            background-color: red;
+            margin: 5px;
+            color: aliceblue;
+            text-align: center;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fundaments flex-flow</h1>
+    <h2>default: row nowrap sem quebra de linha</h2>
+    <div class="flex-container default">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <h2>wrap</h2>
+    <div class="flex-container wrap">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <h2>wrap-reverse</h2>
+    <div class="flex-container wrap-reverse">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <h2> row-reverse nowrap sem quebra de linha</h2>
+    <div class="flex-container r-nowrap">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <h2> row-reverse wrap com quebra de linha</h2>
+    <div class="flex-container r-wrap">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <h2> row-reverse wrap-reverse com quebra de linha</h2>
+    <div class="flex-container rr-wrap">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+<!--colunas-->
+    <h2>Colunas</h2>
+
+    <h2>default: column nowrap sem quebra de linha</h2>
+    <div class="flex-container-column column">
+        <div class="itemColumn">1</div>
+        <div class="itemColumn">2</div>
+       
+    </div>
+
+    <h2>wrap</h2>
+    <div class="flex-container-column wrapColumn">
+        <div class="itemColumn">1</div>
+        <div class="itemColumn">2</div>
+        <div class="itemColumn">3</div>
+        <div class="itemColumn">4</div>
+        <div class="itemColumn">5</div>
+        <div class="itemColumn">6</div>
+    </div>
+
+    <h2>wrap-reverse</h2>
+    <div class="flex-container-column wrap-reverseColumn">
+        <div class="itemColumn">1</div>
+        <div class="itemColumn">2</div>
+        <div class="itemColumn">3</div>
+        <div class="itemColumn">4</div>
+        <div class="itemColumn">5</div>
+        <div class="itemColumn">6</div>
+    </div>
+
+    <h2> column-reverse nowrap sem quebra de linha</h2>
+    <div class="flex-container-column r-nowrapColumn">
+        <div class="itemColumn">1</div>
+        <div class="itemColumn">2</div>
+        
+    </div>
+
+    <h2> column-reverse wrap com quebra de linha</h2>
+    <div class="flex-container-column r-wrapColumn">
+        <div class="itemColumn">1</div>
+        <div class="itemColumn">2</div>
+        
+    </div>
+
+    <h2> column-reverse wrap-reverse com quebra de linha</h2>
+    <div class="flex-container-column rr-wrapColumn">
+        <div class="itemColumn">1</div>
+        <div class="itemColumn">2</div>
+        <div class="itemColumn">3</div>
+        <div class="itemColumn">4</div>
+        <div class="itemColumn">5</div>
+    </div>
+</body>
+</html>

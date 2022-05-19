@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fundamentos flex-basis</title>
+    <style>
+        .flex-container{
+            max-width: 500px;
+            border: 1px solid black;
+            display: flex;
+        }
+        .items{
+            background-color: coral;
+            color: white;
+            text-align: center;
+            margin: 5px;
+
+        }
+        /*tamanho base automatico 
+        ele tenta ocupar todo o restante do espaço do container*/
+        .bauto{
+            flex-basis: auto;
+        }
+        .fg-0{
+            flex-grow: 0;
+        }
+        /*fator crescimento 1*/
+        .fg-1{
+            flex-grow: 1;
+        }
+        /*o espaco q tem do conteudo e duas vezes maior 
+        e usa a base automatica q ele vai definir o esço que vaiter para dimensionar 
+        isso que e o espaço restante do conteudo que nao é utilizado 
+        fator crescimento 2*/
+        .fg-2{
+            flex-grow: 2;
+        }
+/*ele tenta ao maximo colocar que todos os itens tenha 
+um fato de crescimento referente
+entao se aumenta o conteudo ele vai continuar respeitando 
+o espaçamento entre os itens todos vao tentar ter o mesmo width */
+        .bauto-0{
+            flex-basis: 0;
+        }
+        .w100{
+            flex-basis: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex-basis</h1>
+    <p>Auto</p>
+    <div class="flex-container">
+        <div class="items bauto fg-1">A</div>
+        <div class="items bauto fg-1">BBB</div>
+        <div class="items bauto fg-1">C</div>
+        <div class="items bauto fg-2">DEF</div>
+    </div>
+
+
+    <p>0 (zero)</p>
+    <div class="flex-container">
+        <div class="items bauto-0 fg-1">A</div>
+        <div class="items bauto-0 fg-1">BBBddddd</div>
+        <div class="items bauto-0 fg-1">C</div>
+        <div class="items bauto-0 fg-1">DEF</div>
+    </div>
+
+    <p>basis + witdh</p>
+    <div class="flex-container">
+        <div class="items w100 fg-2">A</div>
+        <div class="items w100 fg-2">BBBddddd</div>
+        <div class="items w100 fg-2">C</div>
+        <div class="items w100 fg-2">DEF</div>
+    </div>
+</body>
+</html>
